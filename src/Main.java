@@ -9,7 +9,7 @@ public class Main {
         String sourname;
         int age;
         int humor;
-        int choice;
+        int choice; //test
 
         System.out.println("Witaj, podaj swoje imię: ");
         name = scanner.next();

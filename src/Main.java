@@ -1,4 +1,5 @@
 import createCharacter.CharacterController;
+import filmSimulator.FilmController;
 
 import java.util.Scanner;
 
@@ -8,6 +9,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         CharacterController characterController = new CharacterController();
+        FilmController filmController = new FilmController();
 
         String name;
         String sourname;
@@ -66,6 +68,7 @@ public class Main {
         System.out.println(name + " wybierz, co chcesz robić dalej:");
         System.out.println("*****MENU*****");
         System.out.println("1. Tworzenie postaci");
+        System.out.println("2. Symulator dodawania filmów");
 
         select = scanner.nextInt();
 
@@ -73,6 +76,9 @@ public class Main {
             switch (select) {
                 case 1:
                     characterController.createCharacter();
+                    break;
+                case 2:
+                    filmController.film();
                     break;
                 default:
                     System.out.println("Przykro mi nie ma takiej opcji, proszę wybrać jeszcze raz");

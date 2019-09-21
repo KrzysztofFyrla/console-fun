@@ -1,7 +1,6 @@
 package createCharacter;
 
 import java.util.Scanner;
-import createCharacter.Character;
 
 public class CharacterController{
 

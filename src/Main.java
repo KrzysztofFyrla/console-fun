@@ -1,4 +1,3 @@
-import createCharacter.Character;
 import createCharacter.CharacterController;
 
 import java.util.Scanner;
@@ -7,6 +6,8 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+
+        CharacterController characterController = new CharacterController();
 
         String name;
         String sourname;
@@ -71,7 +72,7 @@ public class Main {
         do {
             switch (select) {
                 case 1:
-                    System.out.println("TWORZENIE POSTACI ROZPOCZĘTE");
+                    characterController.createCharacter();
                     break;
                 default:
                     System.out.println("Przykro mi nie ma takiej opcji, proszę wybrać jeszcze raz");

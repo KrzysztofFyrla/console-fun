@@ -1,3 +1,6 @@
+import createCharacter.Character;
+import createCharacter.CharacterController;
+
 import java.util.Scanner;
 
 public class Main {
@@ -10,6 +13,7 @@ public class Main {
         int age;
         int humor;
         int choice; //test
+        int select;
 
         System.out.println("Witaj, podaj swoje imię: ");
         name = scanner.next();
@@ -56,5 +60,27 @@ public class Main {
             choice = scanner.nextInt();
         } while (choice != 2);
         System.out.println("Dziękuję za wyrażenie Twojej opinii :)");
+
+        //Tworzenie postaci
+        System.out.println(name + " wybierz, co chcesz robić dalej:");
+        System.out.println("*****MENU*****");
+        System.out.println("1. Tworzenie postaci");
+
+        select = scanner.nextInt();
+
+        do {
+            switch (select) {
+                case 1:
+                    System.out.println("TWORZENIE POSTACI ROZPOCZĘTE");
+                    break;
+                default:
+                    System.out.println("Przykro mi nie ma takiej opcji, proszę wybrać jeszcze raz");
+            }
+            System.out.println("Czy chcesz powtórzyć tworzenie postaci?");
+            System.out.println("1. TAK");
+            System.out.println("2. NIE");
+            choice = scanner.nextInt();
+        } while (choice != 2);
+        System.out.println("Dziękuję za skorzystanie z programu, wróć jeszcze :)");
     }
 }

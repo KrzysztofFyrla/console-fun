@@ -1,6 +1,9 @@
 import createCharacter.CharacterController;
+import file.FileOpen;
+import file.FileSave;
 import filmSimulator.FilmController;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
@@ -10,6 +13,8 @@ public class Main {
 
         CharacterController characterController = new CharacterController();
         FilmController filmController = new FilmController();
+        FileSave fileSave = new FileSave();
+        FileOpen fileOpen = new FileOpen();
 
         String name;
         String sourname;
@@ -78,6 +83,21 @@ public class Main {
                     filmController.film();
                     break;
                 case 3:
+                    try {
+                        fileSave.fileSave();
+                        System.out.println("Notatka została utworzona pomyślnie");
+                    } catch (IOException e) {
+                        System.out.println("Coś poszło nie tak");
+                    }
+                    break;
+                case 4:
+                    try {
+                        fileOpen.fileOpen();
+                    } catch (IOException e) {
+                        System.out.println("Coś poszło nie tak");
+                    }
+                    break;
+                case 5:
                     System.console();
                     break;
                 default:
@@ -93,6 +113,8 @@ public class Main {
         System.out.println("*****MENU*****");
         System.out.println("1. Tworzenie postaci");
         System.out.println("2. Symulator dodawania filmów");
-        System.out.println("3. Wyjście");
+        System.out.println("3. Utwórz notatkę");
+        System.out.println("4. Otwórz notatke");
+        System.out.println("5. Wyjście");
     }
 }

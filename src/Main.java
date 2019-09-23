@@ -64,11 +64,8 @@ public class Main {
         } while (choice != 2);
         System.out.println("Dziękuję za wyrażenie Twojej opinii :)");
 
-        //Tworzenie postaci
-        System.out.println(name + " wybierz, co chcesz robić dalej:");
-        System.out.println("*****MENU*****");
-        System.out.println("1. Tworzenie postaci");
-        System.out.println("2. Symulator dodawania filmów");
+        //menu z dolnej klasy
+        menu();
 
         select = scanner.nextInt();
 
@@ -80,14 +77,22 @@ public class Main {
                 case 2:
                     filmController.film();
                     break;
+                case 3:
+                    System.console();
+                    break;
                 default:
                     System.out.println("Przykro mi nie ma takiej opcji, proszę wybrać jeszcze raz");
             }
-            System.out.println("Czy chcesz powtórzyć tworzenie postaci?");
-            System.out.println("1. TAK");
-            System.out.println("2. NIE");
+            menu();
             choice = scanner.nextInt();
-        } while (choice != 2);
+        } while (choice != 3);
         System.out.println("Dziękuję za skorzystanie z programu, wróć jeszcze :)");
+    }
+
+    public static void menu() {
+        System.out.println("*****MENU*****");
+        System.out.println("1. Tworzenie postaci");
+        System.out.println("2. Symulator dodawania filmów");
+        System.out.println("3. Wyjście");
     }
 }

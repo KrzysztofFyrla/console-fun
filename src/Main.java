@@ -1,3 +1,6 @@
+import abstraction.Figure;
+import abstraction.Square;
+import abstraction.Triangle;
 import createCharacter.CharacterController;
 import file.FileOpen;
 import file.FileSave;
@@ -7,6 +10,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);

@@ -3,6 +3,7 @@ import abstraction.Lambda;
 import abstraction.Square;
 import abstraction.Triangle;
 import createCharacter.CharacterController;
+import enumeratedType.Cars;
 import file.FileOpen;
 import file.FileSave;
 import filmSimulator.FilmController;
@@ -33,7 +34,9 @@ public class Main {
         int choice; //test
         int select;
 
-        filmController.film();
+        for(Cars cars : Cars.values()) {
+            System.out.println(cars.getYear() + ", " +cars.getDoor());
+        }
 
         /**Wywołanie lambdy z klasy interfejs -> Lambda
         Lambda addition = (a, b) -> a + b;

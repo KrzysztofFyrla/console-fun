@@ -15,7 +15,6 @@ public class FilmController {
         List<Film> filmList = new ArrayList<>();
 
         int choice;
-        int select;
 
         System.out.println("*****SYMULATOR DODAWANIA FILMÓW*****");
 
@@ -54,37 +53,5 @@ public class FilmController {
         for (Film lista: filmList){
             System.out.println(lista);
         }
-
-        /*do {
-            System.out.println("Witaj w kreatorze dodawnia filmów.");
-            System.out.println("Podaj tytuł:");
-            film.title = scanner.nextLine();
-
-            System.out.println("Podaj gatunek:");
-            film.type = scanner.nextLine();
-
-            System.out.println("Podaj imię i nazwisko reżysera:");
-            film.director = scanner.nextLine();
-
-            System.out.println("Podaj budżet filmu:");
-            film.boxOffice = scanner.nextInt();
-
-            System.out.println("Menu");
-            System.out.println("1. Dodaj kolejny film");
-            System.out.println("2. Pokaż listę");
-            choice = scanner.nextInt();
-        } while(choice != 2);
-
-        filmList.add(film.title);
-        filmList.add(film.type);
-        filmList.add(film.director);
-        filmListInt.add(film.boxOffice);
-
-        for (String s : filmList){
-            System.out.println("Tytuł: " + s);
-            for (Integer i : filmListInt) {
-                System.out.println("Box office: " + i);
-            }
-        }*/
     }
 }

@@ -1,12 +1,17 @@
 import abstraction.Figure;
+import abstraction.Lambda;
 import abstraction.Square;
 import abstraction.Triangle;
 import createCharacter.CharacterController;
 import file.FileOpen;
 import file.FileSave;
 import filmSimulator.FilmController;
+import searchHome.Home;
+import searchHome.HomeController;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -19,6 +24,7 @@ public class Main {
         FilmController filmController = new FilmController();
         FileSave fileSave = new FileSave();
         FileOpen fileOpen = new FileOpen();
+        HomeController home = new HomeController();
 
         String name;
         String sourname;
@@ -26,6 +32,10 @@ public class Main {
         int humor;
         int choice; //test
         int select;
+
+        /**Wywołanie lambdy z klasy interfejs -> Lambda
+        Lambda addition = (a, b) -> a + b;
+        System.out.println(addition.calculate(4, 4));*/
 
         System.out.println("Witaj, podaj swoje imię: ");
         name = scanner.next();
@@ -102,6 +112,9 @@ public class Main {
                     }
                     break;
                 case 5:
+                    home.homeController();
+                    break;
+                case 6:
                     System.console();
                     break;
                 default:
@@ -119,6 +132,7 @@ public class Main {
         System.out.println("2. Symulator dodawania filmów");
         System.out.println("3. Utwórz notatkę");
         System.out.println("4. Otwórz notatke");
-        System.out.println("5. Wyjście");
+        System.out.println("5. Filtrowanie mieszkań");
+        System.out.println("6. Wyjście");
     }
 }

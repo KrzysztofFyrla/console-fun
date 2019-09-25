@@ -33,6 +33,8 @@ public class Main {
         int choice; //test
         int select;
 
+        filmController.film();
+
         /**Wywołanie lambdy z klasy interfejs -> Lambda
         Lambda addition = (a, b) -> a + b;
         System.out.println(addition.calculate(4, 4));*/
@@ -122,7 +124,7 @@ public class Main {
             }
             menu();
             choice = scanner.nextInt();
-        } while (choice != 3);
+        } while (choice != 6);
         System.out.println("Dziękuję za skorzystanie z programu, wróć jeszcze :)");
     }
 

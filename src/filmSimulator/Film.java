@@ -48,4 +48,12 @@ public class Film {
     public void setBoxOffice(int boxOffice) {
         this.boxOffice = boxOffice;
     }
+
+    @Override
+    public String toString() {
+        return "Tytuł: " + title + " " +
+                "Gatunek: " + type + " " +
+                "Reżyser: " + director + " " +
+                "Box Office: " +boxOffice;
+    }
 }

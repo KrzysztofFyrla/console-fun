@@ -7,6 +7,7 @@ import enumeratedType.Cars;
 import file.FileOpen;
 import file.FileSave;
 import filmSimulator.FilmController;
+import myThread.MyThread;
 import searchHome.Home;
 import searchHome.HomeController;
 
@@ -26,6 +27,7 @@ public class Main {
         FileSave fileSave = new FileSave();
         FileOpen fileOpen = new FileOpen();
         HomeController home = new HomeController();
+        MyThread myThread = new MyThread();
 
         String name;
         String sourname;
@@ -33,6 +35,8 @@ public class Main {
         int humor;
         int choice; //test
         int select;
+
+        myThread.myThread();
 
         for(Cars cars : Cars.values()) {
             System.out.println(cars.getYear() + ", " +cars.getDoor());

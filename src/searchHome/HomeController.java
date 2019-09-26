@@ -25,7 +25,7 @@ public class HomeController {
 
         //pierwszy sposób filtrowania strumienia
         homeList.stream()
-                .filter(home -> home.getCity().equals("Katowice"))
+                .filter(home -> home.getCity().equals("Katowice")) //porownuje czy w liscie znajduje sie ta nazwa
                 .filter(home -> home.getDistrict().equals("Paniczki"))
                 .filter(home -> home.getPrice() > 300000)
                 .filter(home -> home.getNumberRooms() > 1)

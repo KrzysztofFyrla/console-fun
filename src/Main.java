@@ -10,6 +10,7 @@ import filmSimulator.FilmController;
 import myThread.MyThread;
 import searchHome.Home;
 import searchHome.HomeController;
+import typGeneryczny.TypySparam;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -28,6 +29,7 @@ public class Main {
         FileOpen fileOpen = new FileOpen();
         HomeController home = new HomeController();
         MyThread myThread = new MyThread();
+        TypySparam typySparam = new TypySparam();
 
         String name;
         String sourname;
@@ -36,7 +38,7 @@ public class Main {
         int choice; //test
         int select;
 
-        myThread.myThread();
+        typySparam.typeSparam();
 
         for(Cars cars : Cars.values()) {
             System.out.println(cars.getYear() + ", " +cars.getDoor());

@@ -39,16 +39,38 @@ public class MyThread {
     public static void myThread() {
 
         //uruchomienie wątków, niczego nie musimy zmieniać w klasie newThread, wystarczy dopisywać nowe obiekty
-        new NewThread("JEDEN");
+        //ponieżej znajdują się dwa zwykłe wywołania
+        //new NewThread("JEDEN");
+        //new NewThread("DWA");
+
+        //wywołania wątków tworząc obiekty
+        NewThread nw1 = new NewThread("JEDEN");
+        NewThread nw2 = new NewThread("DWA");
 
         //poniżej znajduje się całkowicie inny wątek -> główny
         try {
+            /** Usypianie zapomocą metody sleep
             System.out.println("Usypiam wątek główny");
             Thread.sleep(4000);
-            System.out.println("Wznawiam wątek główny");
+            System.out.println("Wznawiam wątek główny"); **/
+            //sprawdzenie czy wątek działa true/false
+            System.out.println(nw1.t.isAlive());
+            System.out.println(nw2.t.isAlive());
+
+            //usypianie z wykorzystaniem wątków tworzonych z obiektów i metody join
+            nw1.t.join();
+            nw2.t.join(); //wątek główny będzie tak długo działał aż zakończą się wszystkie wątki poboczne
         } catch (InterruptedException e) {
             System.out.println("Przerwano wątek główny");
         }
         System.out.println("Zakończono wykonywanie wątku głównego");
+
+        if (nw1.t.isAlive() == true){
+            System.out.println("Wątek dalej działa");
+        } else {
+            System.out.println("Wątek przestał działać");
+        }
+        System.out.println(nw1.t.isAlive());
+        System.out.println(nw2.t.isAlive());
     }
 }

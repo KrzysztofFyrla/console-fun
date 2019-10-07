@@ -2,6 +2,7 @@ import abstraction.Figure;
 import abstraction.Lambda;
 import abstraction.Square;
 import abstraction.Triangle;
+import builder.Budowniczy;
 import createCharacter.CharacterController;
 import enumeratedType.Cars;
 import file.FileOpen;
@@ -30,6 +31,7 @@ public class Main {
         HomeController home = new HomeController();
         MyThread myThread = new MyThread();
         TypySparam typySparam = new TypySparam();
+        Budowniczy budowniczy = new Budowniczy();
 
         String name;
         String sourname;
@@ -38,7 +40,10 @@ public class Main {
         int choice; //test
         int select;
 
-        typySparam.typeSparam();
+        //wywołanie buildera
+        budowniczy.budowniczy();
+
+        //typySparam.typeSparam();
 
         for(Cars cars : Cars.values()) {
             System.out.println(cars.getYear() + ", " +cars.getDoor());

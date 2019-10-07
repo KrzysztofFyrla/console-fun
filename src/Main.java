@@ -8,6 +8,7 @@ import enumeratedType.Cars;
 import file.FileOpen;
 import file.FileSave;
 import filmSimulator.FilmController;
+import interator.Iteracja;
 import myThread.MyThread;
 import searchHome.Home;
 import searchHome.HomeController;
@@ -32,6 +33,7 @@ public class Main {
         MyThread myThread = new MyThread();
         TypySparam typySparam = new TypySparam();
         Budowniczy budowniczy = new Budowniczy();
+        Iteracja iteracja = new Iteracja();
 
         String name;
         String sourname;
@@ -39,6 +41,8 @@ public class Main {
         int humor;
         int choice; //test
         int select;
+
+        iteracja.interacja();
 
         //wywołanie buildera
         budowniczy.budowniczy();

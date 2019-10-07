@@ -5,6 +5,7 @@ import abstraction.Triangle;
 import builder.Budowniczy;
 import createCharacter.CharacterController;
 import enumeratedType.Cars;
+import factory.Fabryka;
 import file.FileOpen;
 import file.FileSave;
 import filmSimulator.FilmController;
@@ -34,6 +35,7 @@ public class Main {
         TypySparam typySparam = new TypySparam();
         Budowniczy budowniczy = new Budowniczy();
         Iteracja iteracja = new Iteracja();
+        Fabryka fabryka = new Fabryka();
 
         String name;
         String sourname;
@@ -42,16 +44,18 @@ public class Main {
         int choice; //test
         int select;
 
-        iteracja.interacja();
+        fabryka.fabryka();
+
+        //iteracja.interacja();
 
         //wywołanie buildera
-        budowniczy.budowniczy();
+        //budowniczy.budowniczy();
 
         //typySparam.typeSparam();
 
-        for(Cars cars : Cars.values()) {
+        /*for(Cars cars : Cars.values()) {
             System.out.println(cars.getYear() + ", " +cars.getDoor());
-        }
+        }*/
 
         /**Wywołanie lambdy z klasy interfejs -> Lambda
         Lambda addition = (a, b) -> a + b;

@@ -5,7 +5,7 @@ import java.util.*;
 /**Iterator potrafi sam sprawdzic kiedy osiagnal koniec koleckcji, sluzy do tego metoda hasNext, ktora zwraca
  * true/false.
  * Iterator działa praktycznie tak samo jak pętla forech, jednak ona iteruje do przodu a iterator może do tyłu.
- * Dlate iteratora nie musimy pdoawać typu jakim jest lista, a forech potrzebuje.
+ * Dla tego iteratora nie musimy pdoawać typu jakim jest lista, a forech potrzebuje.
  *
  * SET:
  * Set nie jest listą dlatego możemy iterować tylko w przód, nie jest czymś co jest indeksowane

@@ -9,6 +9,7 @@ import factory.Fabryka;
 import file.FileOpen;
 import file.FileSave;
 import filmSimulator.FilmController;
+import ifInaczej.IfInaczej;
 import interator.Iteracja;
 import myThread.MyThread;
 import searchHome.Home;
@@ -36,6 +37,7 @@ public class Main {
         Budowniczy budowniczy = new Budowniczy();
         Iteracja iteracja = new Iteracja();
         Fabryka fabryka = new Fabryka();
+        IfInaczej ifInaczej= new IfInaczej();
 
         String name;
         String sourname;
@@ -44,7 +46,9 @@ public class Main {
         int choice; //test
         int select;
 
-        fabryka.fabryka();
+        ifInaczej.ifInaczej();
+
+        //fabryka.fabryka();
 
         //iteracja.interacja();
 

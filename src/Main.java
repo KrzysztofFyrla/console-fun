@@ -14,6 +14,7 @@ import interator.Iteracja;
 import myThread.MyThread;
 import searchHome.Home;
 import searchHome.HomeController;
+import sieci.Siec;
 import typGeneryczny.TypySparam;
 
 import java.io.IOException;
@@ -38,6 +39,7 @@ public class Main {
         Iteracja iteracja = new Iteracja();
         Fabryka fabryka = new Fabryka();
         IfInaczej ifInaczej= new IfInaczej();
+        Siec siec = new Siec();
 
         String name;
         String sourname;
@@ -46,7 +48,13 @@ public class Main {
         int choice; //test
         int select;
 
-        ifInaczej.ifInaczej();
+        try {
+            siec.siec();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        //ifInaczej.ifInaczej();
 
         //fabryka.fabryka();
 

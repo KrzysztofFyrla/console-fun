@@ -12,6 +12,7 @@ import filmSimulator.FilmController;
 import ifInaczej.IfInaczej;
 import interator.Iteracja;
 import myThread.MyThread;
+import obserwator.WzorzecObserwator;
 import searchHome.Home;
 import searchHome.HomeController;
 import sieci.Siec;
@@ -40,6 +41,7 @@ public class Main {
         Fabryka fabryka = new Fabryka();
         IfInaczej ifInaczej= new IfInaczej();
         Siec siec = new Siec();
+        WzorzecObserwator wzorzecObserwator = new WzorzecObserwator();
 
         String name;
         String sourname;
@@ -48,11 +50,13 @@ public class Main {
         int choice; //test
         int select;
 
-        try {
+        wzorzecObserwator.obserwator();
+
+        /*try {
             siec.siec();
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
 
         //ifInaczej.ifInaczej();
 

@@ -17,6 +17,7 @@ import searchHome.Home;
 import searchHome.HomeController;
 import sieci.Siec;
 import typGeneryczny.TypySparam;
+import wyrazeniaRegularne.WyrazeniaRegularne;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -42,6 +43,7 @@ public class Main {
         IfInaczej ifInaczej= new IfInaczej();
         Siec siec = new Siec();
         WzorzecObserwator wzorzecObserwator = new WzorzecObserwator();
+        WyrazeniaRegularne wyrazeniaRegularne = new WyrazeniaRegularne();
 
         String name;
         String sourname;
@@ -49,6 +51,8 @@ public class Main {
         int humor;
         int choice; //test
         int select;
+
+        wyrazeniaRegularne.wyrazeniaRegularne();
 
         wzorzecObserwator.obserwator();
 

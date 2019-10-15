@@ -13,5 +13,18 @@ public class Klasy {
         Zewnetrzna.WewnetrznaStatyczna ws = new Zewnetrzna.WewnetrznaStatyczna();
         ws.testNaZewStat();
 
+        //klasy anonimowe
+        MojInterfejs mojInterfejs = new MojInterfejs() {
+
+            int x = 10;
+
+            @Override
+            public void wyswietlTekst(String pStr) {
+                System.out.println(pStr);
+                System.out.println(x);
+            }
+        };
+
+        mojInterfejs.wyswietlTekst("Cześć");
     }
 }

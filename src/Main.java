@@ -11,6 +11,7 @@ import file.FileSave;
 import filmSimulator.FilmController;
 import ifInaczej.IfInaczej;
 import interator.Iteracja;
+import klasy.Klasy;
 import myThread.MyThread;
 import obserwator.WzorzecObserwator;
 import searchHome.Home;
@@ -44,6 +45,7 @@ public class Main {
         Siec siec = new Siec();
         WzorzecObserwator wzorzecObserwator = new WzorzecObserwator();
         WyrazeniaRegularne wyrazeniaRegularne = new WyrazeniaRegularne();
+        Klasy klasy = new Klasy();
 
         String name;
         String sourname;
@@ -51,6 +53,8 @@ public class Main {
         int humor;
         int choice; //test
         int select;
+
+        klasy.klasy();
 
         wyrazeniaRegularne.wyrazeniaRegularne();
 
